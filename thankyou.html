@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You - Temple of the Awakening Heart 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lavender: #b497bd;
+      --moon-white: #f9f8f4;
+      --silver: #c0c0c0;
+      --text-dark: #4a4a4a;
+    }
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom right, var(--moon-white), var(--lavender));
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: flex-end;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .home-button {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 10px 24px;
+      border: 2px solid var(--silver);
+      background-color: transparent;
+      color: var(--lavender);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      user-select: none;
+    }
+    .home-button:hover {
+      background-color: var(--lavender);
+      color: var(--moon-white);
+      box-shadow: 0 4px 10px rgba(176, 128, 202, 0.3);
+    }
+    .thankyou-message {
+      margin: 60px 0 40px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      color: var(--lavender);
+      text-align: center;
+      animation: fadeInDown 1.2s ease forwards;
+      max-width: 600px;
+      line-height: 1.4;
+    }
+    .testimonials {
+      width: 100%;
+      max-width: 700px;
+      background: white;
+      border-radius: 16px;
+      padding: 30px 40px;
+      box-shadow: 0 8px 20px rgba(180, 140, 200, 0.3);
+      animation: fadeInUp 1.5s ease forwards;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+    .testimonials h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 28px;
+      color: var(--lavender);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .testimonial-item {
+      font-style: italic;
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #555;
+      position: relative;
+      padding-left: 25px;
+      line-height: 1.5;
+    }
+    .testimonial-item::before {
+      content: "“";
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      color: var(--lavender);
+      position: absolute;
+      left: 0;
+      top: -10px;
+      line-height: 1;
+    }
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--lavender);
+      margin-top: 6px;
+      text-align: right;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      .thankyou-message {
+        font-size: 28px;
+        margin: 40px 20px;
+      }
+      .testimonials {
+        padding: 20px;
+        max-height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="home-button" aria-label="Go to Home Page">Home</a>
+  </header>
+
+  <div class="thankyou-message">
+    Thank you for contacting us, a priestess will reach out to you shortly..
+  </div>
+
+  <section class="testimonials" aria-label="Testimonials">
+    <h3>What Our Visitors Say</h3>
+
+    <div class="testimonial-item">
+      After 5 years, my husband finally came back thanks to the Temple of the Awakening Heart.<br/>
+      <div class="testimonial-author">— L. M.</div>
+    </div>
+    <div class="testimonial-item">
+      I finally got the job I was praying for! This temple truly uplifts the spirit.<br/>
+      <div class="testimonial-author">— R. T.</div>
+    </div>
+    <div class="testimonial-item">
+      The healing and love I felt here changed my life completely.<br/>
+      <div class="testimonial-author">— A. S.</div>
+    </div>
+    <div class="testimonial-item">
+      My anxiety has reduced so much since I started attending sessions here.<br/>
+      <div class="testimonial-author">— K. D.</div>
+    </div>
+    <div class="testimonial-item">
+      The guidance and peace I received are priceless.<br/>
+      <div class="testimonial-author">— J. P.</div>
+    </div>
+    <div class="testimonial-item">
+      The Temple helped me reconnect with my true self and find clarity.<br/>
+      <div class="testimonial-author">— M. R.</div>
+    </div>
+    <div class="testimonial-item">
+      I feel truly blessed after every visit — the energy is incredible.<br/>
+      <div class="testimonial-author">— N. S.</div>
+    </div>
+    <div class="testimonial-item">
+      Thanks to this temple, my spiritual journey took a beautiful turn.<br/>
+      <div class="testimonial-author">— T. H.</div>
+    </div>
+    <div class="testimonial-item">
+      The warmth and compassion here are unlike anything I’ve experienced.<br/>
+      <div class="testimonial-author">— E. L.</div>
+    </div>
+    <div class="testimonial-item">
+      I feel lighter, freer, and more hopeful thanks to the healing here.<br/>
+      <div class="testimonial-author">— F. G.</div>
+    </div>
+  </section>
+</body>
+</html>

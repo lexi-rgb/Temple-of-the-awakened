@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Session - Temple of the Awakening Heart 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lavender: #b497bd;
+      --moon-white: #f9f8f4;
+      --silver: #c0c0c0;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, var(--moon-white), var(--lavender));
+      color: #4a4a4a;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      margin-bottom: 40px;
+    }
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 28px;
+      color: var(--lavender);
+      cursor: pointer;
+    }
+    nav button {
+      background-color: transparent;
+      border: 2px solid var(--silver);
+      color: var(--lavender);
+      padding: 8px 16px;
+      margin-left: 15px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    nav button:hover {
+      background-color: var(--lavender);
+      color: var(--moon-white);
+      box-shadow: 0 4px 10px rgba(176, 128, 202, 0.3);
+    }
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--moon-white);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(180, 150, 190, 0.3);
+    }
+    h2 {
+      color: var(--lavender);
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #5a4a6a;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1.5px solid var(--silver);
+      font-size: 16px;
+      font-family: 'Open Sans', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--lavender);
+      box-shadow: 0 0 8px var(--lavender);
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    button[type="submit"] {
+      background-color: var(--lavender);
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 0;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #a07dad;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="location.href='index.html'">Temple of the Awakening Heart 💖</div>
+    <nav>
+      <button onclick="location.href='index.html'">Home</button>
+      <button disabled style="opacity:0.5; cursor:not-allowed;">Book Session</button>
+      <button onclick="location.href='contact.html'">Contact Us</button>
+      <button onclick="location.href='donation.html'">Donation</button>
+      <button onclick="location.href='nextpage.html'">What We Offer</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Book a Session</h2>
+    <form id="booking-form">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+
+      <label for="whatsappNumber">WhatsApp Number</label>
+      <input type="tel" id="whatsappNumber" name="whatsappNumber" placeholder="+1 234 567 8900" required pattern="^\+?[0-9\s\-]{7,}$" />
+
+      <label for="situation">Brief Explanation of Situation</label>
+      <textarea id="situation" name="situation" placeholder="Describe your situation briefly" required></textarea>
+
+      <button type="submit">Send WhatsApp Message</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('booking-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('fullName').value.trim();
+      const whatsappNumber = document.getElementById('whatsappNumber').value.trim();
+      const situation = document.getElementById('situation').value.trim();
+
+      if (!name || !whatsappNumber || !situation) {
+        alert('Please fill out all fields.');
+        return;
+      }
+
+      // Construct the message
+      const message = `Hello my name is ${name} I've been experiencing ${situation} and I'll like to book a session, how do I go about it?`;
+
+      // WhatsApp recipient number (fixed)
+      const recipient = '18195001338'; // no spaces or special chars
+
+      // Encode message for URL
+      const encodedMessage = encodeURIComponent(message);
+
+      // WhatsApp API URL
+      const whatsappURL = `https://wa.me/${recipient}?text=${encodedMessage}`;
+
+      // Open WhatsApp link in new tab/window
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+</body>
+</html>

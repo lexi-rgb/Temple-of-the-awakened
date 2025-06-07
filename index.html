@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temple of the Awakening Heart 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lavender: #b497bd;
+      --moon-white: #f9f8f4;
+      --silver: #c0c0c0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, var(--moon-white), var(--lavender));
+      color: #4a4a4a;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 28px;
+      color: var(--lavender);
+    }
+
+    nav button {
+      background-color: transparent;
+      border: 2px solid var(--silver);
+      color: var(--lavender);
+      padding: 8px 16px;
+      margin-left: 15px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: var(--lavender);
+      color: var(--moon-white);
+      box-shadow: 0 4px 10px rgba(176, 128, 202, 0.3);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to bottom, var(--moon-white), var(--lavender));
+      animation: fadeIn 2s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-family: 'Great Vibes', cursive;
+      color: var(--lavender);
+      margin-bottom: 20px;
+      animation: floatIn 2s ease-out forwards;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+      animation: fadeInUp 2.5s ease-out;
+    }
+
+    .hero .cta-button {
+      padding: 12px 26px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      background-color: var(--lavender);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .hero .cta-button:hover {
+      background-color: #a07dad;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0 }
+      to { opacity: 1 }
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+
+    #music-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--lavender);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 16px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Temple of the Awakening Heart 💖</div>
+    <nav>
+      <button onclick="scrollToSection('home')">Home</button>
+      <button onclick="location.href='booking.html'">Book Session</button>
+      <button onclick="location.href='contact.html'">Contact Us</button>
+      <button onclick="location.href='donation.html'">Donation</button>
+      <button onclick="location.href='nextpage.html'">What We Offer</button>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Welcome to the Temple of the Awakening Heart 💖</h1>
+    <p>
+      Step into a sacred space where your soul is honored, your heart is heard, and your spirit is uplifted.  
+      Here, love flows freely, healing begins gently, and transformation is guided by divine grace.  
+      You are seen. You are loved. You are home.
+    </p>
+    <button class="cta-button" onclick="location.href='nextpage.html'">What We Offer</button>
+  </section>
+
+  <audio id="bg-music" loop autoplay hidden>
+    <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mp3">
+  </audio>
+
+  <button id="music-toggle">🎵</button>
+
+  <script>
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    const bgMusic = document.getElementById('bg-music');
+    const toggleBtn = document.getElementById('music-toggle');
+    let playing = true;
+
+    toggleBtn.addEventListener('click', () => {
+      if (playing) {
+        bgMusic.pause();
+        toggleBtn.textContent = '🔇';
+      } else {
+        bgMusic.play();
+        toggleBtn.textContent = '🎵';
+      }
+      playing = !playing;
+    });
+  </script>
+</body>
+</html>

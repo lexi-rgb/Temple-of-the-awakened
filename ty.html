@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You - Temple of the Awakening Heart 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lavender: #c8a2c8;
+      --moonwhite: #fdfdfe;
+      --silver: #c0c0c0;
+      --deep-purple: #5a3e6e;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--moonwhite);
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: var(--deep-purple);
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      background: var(--lavender);
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background: var(--lavender);
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin: 0;
+      color: var(--deep-purple);
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: var(--deep-purple);
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: var(--lavender);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heart"></div>
+    <h1>Thank You 💖</h1>
+    <p>Your sacred gift has been received with deep gratitude.</p>
+    <button onclick="location.href='index.html'">Return Home</button>
+  </div>
+</body>
+</html>

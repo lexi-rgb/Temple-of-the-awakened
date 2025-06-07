@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate - Temple of the Awakening Heart 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lavender: #b497bd;
+      --moon-white: #f9f8f4;
+      --silver: #c0c0c0;
+      --deep-purple: #5a3e6e;
+      --soft-pink: #f9e0e8;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, var(--moon-white), var(--lavender));
+      color: var(--deep-purple);
+      padding: 60px 20px;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: var(--moon-white);
+      max-width: 700px;
+      border-radius: 20px;
+      padding: 40px 50px;
+      box-shadow: 0 15px 40px rgba(180, 150, 190, 0.4);
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      margin-bottom: 25px;
+      color: var(--lavender);
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      font-weight: 400;
+      color: var(--deep-purple);
+      font-style: italic;
+      letter-spacing: 0.03em;
+    }
+    p.emotional {
+      font-weight: 600;
+      color: #7a4f8b;
+    }
+    button {
+      background-color: var(--lavender);
+      color: white;
+      border: none;
+      border-radius: 35px;
+      padding: 18px 50px;
+      font-size: 22px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 8px 20px rgba(180, 150, 190, 0.6);
+    }
+    button:hover {
+      background-color: #9c79b4;
+      box-shadow: 0 10px 30px rgba(156, 121, 180, 0.8);
+    }
+    .heart {
+      font-size: 28px;
+      color: #d66299;
+      animation: heartbeat 1.6s infinite;
+      display: inline-block;
+      margin-left: 8px;
+      margin-bottom: 20px;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <h1>Support the Temple of the Awakening Heart <span class="heart">💖</span></h1>
+    <p>
+      Every breath you take is a sacred gift; every heartbeat a whisper of the divine.  
+      In this chaotic world, the Temple stands as a sanctuary — a beacon of hope, healing, and transformation.  
+      But to keep this sacred flame burning, we need your love, your faith, your generosity.
+    </p>
+    <p class="emotional">
+      Imagine the countless souls who have found light in their darkest hours, who have felt the warmth of healing when all seemed lost.  
+      Your donation is more than just a gift — it’s a lifeline for those searching for peace, for purpose, for awakening.  
+      With your help, we can continue to hold space for miracles, for journeys of the spirit, and for hearts to heal.  
+      <strong>Give not just with your hands, but with your heart — and witness the power of your compassion ripple through eternity.</strong>
+    </p>
+    <button type="button" onclick="location.href='pmt.html'">Proceed to Donate</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate Crypto - Temple of the Awakening Heart 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lavender: #c8a2c8;
+      --moonwhite: #fdfdfe;
+      --silver: #c0c0c0;
+      --deep-purple: #5a3e6e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: var(--moonwhite);
+      color: var(--deep-purple);
+    }
+
+    header {
+      background: var(--lavender);
+      padding: 10px;
+      text-align: right;
+    }
+
+    header button {
+      margin-left: 10px;
+      padding: 10px;
+      background: var(--deep-purple);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      font-family: 'Great Vibes', cursive;
+      color: var(--deep-purple);
+    }
+
+    .crypto-address {
+      margin: 20px 0;
+      background: #f4eff6;
+      padding: 10px;
+      border-left: 5px solid var(--lavender);
+      border-radius: 6px;
+      position: relative;
+    }
+
+    .crypto-label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .warning {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--lavender);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='donation.html'">Back to Donation</button>
+    <button onclick="location.href='booking.html'">Book Session</button>
+  </header>
+
+  <main>
+    <h1>Donate to the Temple of the Awakening Heart 💖</h1>
+    <h2>Donate with Cryptocurrency</h2>
+
+    <div class="crypto-address">
+      <div class="crypto-label">Bitcoin (BTC):</div>
+      <div id="btc">bc1qrexqhfnxts6rmcgjw4ymafsglencdepm8d7khe</div>
+      <button class="copy-btn" onclick="copyToClipboard('btc')">Copy</button>
+      <div class="warning">Please do not send below $5 or it'll be lost forever on the blockchain.</div>
+    </div>
+
+    <div class="crypto-address">
+      <div class="crypto-label">Ethereum (ETH):</div>
+      <div id="eth">0x7254a25B977ed0F2ce54eCabEBA7C33E393872e2</div>
+      <button class="copy-btn" onclick="copyToClipboard('eth')">Copy</button>
+      <div class="warning">Please do not send below $5 or it'll be lost forever on the blockchain.</div>
+    </div>
+
+    <div class="crypto-address">
+      <div class="crypto-label">USDT (Tether ERC20):</div>
+      <div id="usdt">0x7254a25B977ed0F2ce54eCabEBA7C33E393872e2</div>
+      <button class="copy-btn" onclick="copyToClipboard('usdt')">Copy</button>
+      <div class="warning">Please do not send below $5 or it'll be lost forever on the blockchain.</div>
+    </div>
+  </main>
+
+  <script>
+    function copyToClipboard(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Address copied to clipboard!");
+      }).catch(err => {
+        console.error("Failed to copy: ", err);
+      });
+    }
+  </script>
+</body>
+</html>
